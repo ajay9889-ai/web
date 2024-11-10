@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-card">
+            <h2>Welcome, User!</h2>
+            <p>Your personal dashboard to track earnings, referrals, and more.</p>
+        </div>
+
+        <!-- Referral Section -->
+        <div class="card referral-card">
+            <h3>Your Referral Code</h3>
+            <p><strong id="userReferralCode">ABC123</strong></p>
+            <input type="text" id="referralLink" value="https://yourwebsite.com/register?ref=ABC123" readonly>
+            <button onClick="copyReferralLink()">Copy Referral Link</button>
+        </div>
+
+        <!-- Earnings Section -->
+        <div class="card earnings-card">
+            <h3>Your Earnings</h3>
+            <p><span id="earnings">$0.00</span></p>
+        </div>
+
+        <!-- Referrals Section -->
+        <div class="card referrals-card">
+            <h3>Referrals</h3>
+            <p><span id="referrals">0</span> Referrals</p>
+        </div>
+
+        <!-- Deposit Section -->
+        <div class="card deposit-card">
+            <h3>Deposit Funds</h3>
+            <p>Add funds to your account to unlock more features.</p>
+            <button onClick="initiateDeposit()">Deposit Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
